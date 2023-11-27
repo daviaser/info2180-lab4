@@ -17,19 +17,23 @@ header{
     color: white;
 }
 main{
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background:rgb(72, 137, 211);
     font-weight:500;
-    padding:130px;
+    padding-top: 20px;
+    padding-bottom:200px;
     font-size: 18px;
     color: white;
 }
-main p{
-    text-align:left;
+#AC p{
+    text-align: center;
     margin-bottom:20px;
 }
 form{
-    display:inline-block;
+    display: inline-block;
+    resize: both;
+    margin-left: 380px;
+    align-items: center;
     padding:10px;
 }
 form input{
@@ -50,9 +54,20 @@ form button{
     border-radius: 10px;
     padding: 15px;
 }
+#result{
+    color:black;
+    margin:auto;
+    width:50%;
+    padding:20px;
+}
+#result ul{
+    text-decoration:none;
+}
 footer{
     background-color: gray;
+    color: white;
     text-align: center;
     font-size: 18px;
+    font-weight: 500;
     padding:30px ;
 }

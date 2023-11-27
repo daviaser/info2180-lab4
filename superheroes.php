@@ -79,16 +79,17 @@ if ($findhero == ""):
     ?>
         <ul>
         <?php foreach ($superheroes as $superhero): ?>
-          <li><?= $superhero['alias']; ?></li>
+          <li> <?= $superhero['alias']; ?></li>
         <?php endforeach; ?>
         </ul>
     <?php
 
 else:
     foreach ($superheroes as $superhero):
-        if ($superhero['alias'] == $findhero or $superhero['name'] == $findhero):
+        if (strcasecmp($superhero['alias'], $findhero) == 0 || strcasecmp($superhero['name'], $findhero) == 0):
             $search = "true";
-            ?><h3><?= $superhero['alias']; ?></h3>
+            ?>
+            <h3><?= $superhero['alias']; ?></h3>
             <h4> A.K.A <?= $superhero['name']; ?></h4>
             <p><?= $superhero['biography']; ?></p>
             <?php
@@ -96,7 +97,7 @@ else:
     endforeach;
 
     if ($search == "false"):
-        ?> <p style="color: red"> Superhero not in list </p> <?php
+        ?> <p style="color: red"> SUPERHERO NOT FOUND </p> <?php
     endif;
 
 endif;
